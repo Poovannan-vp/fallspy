@@ -1,0 +1,135 @@
+/* Events Page Styling */
+.events-page {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+  }
+  
+  /* Page Header */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .page-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #0d6efd;
+  }
+  
+  /* Filters Section */
+  .filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #0d6efd;
+    outline: none;
+  }
+  
+  #exportBtn {
+    background-color: #0d6efd;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #exportBtn:hover {
+    background-color: #0b5ed7;
+  }
+  
+  /* Table Styling */
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  
+  #eventsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+  }
+  
+  #eventsTable th,
+  #eventsTable td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e6ea;
+    white-space: nowrap;
+  }
+  
+  #eventsTable th {
+    background-color: #e9f0ff;
+    font-weight: 600;
+    color: #003366;
+  }
+  
+  #eventsTable tr:hover {
+    background-color: #f1f7ff;
+  }
+  
+  /* Event Types Styling */
+  .event-critical {
+    color: #dc3545; /* Red */
+    font-weight: bold;
+  }
+  
+  .event-warning {
+    color: #ffc107; /* Yellow */
+    font-weight: 500;
+  }
+  
+  .event-normal {
+    color: #6c757d; /* Gray */
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .page-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .filters {
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    #exportBtn {
+      width: fit-content;
+    }
+  }
+  

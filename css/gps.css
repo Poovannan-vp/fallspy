@@ -1,0 +1,109 @@
+/* GPS Page Styling */
+.gps-page {
+    padding: 2rem;
+    background-color: #f4f6fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Page Title */
+  .gps-page h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #0d6efd;
+  }
+  
+  /* Card Container */
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Patient Selector */
+  .patient-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Form Controls */
+  .form-control {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 200px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #0d6efd;
+    outline: none;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary {
+    background-color: #0d6efd;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0b5ed7;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Map Styling */
+  #map {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+  }
+  
+  /* Location History */
+  #locationHistory {
+    width: 100%;
+    height: 300px;
+    background-color: #eef3fa;
+    border-radius: 8px;
+    padding: 0.5rem;
+    overflow-y: auto;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .patient-selector {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .form-control,
+    .btn {
+      width: 100%;
+    }
+  
+    .gps-page h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

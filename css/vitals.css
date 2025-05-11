@@ -1,0 +1,108 @@
+/* Vitals Page Styling - Enhanced */
+.vitals-page {
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Patient Selector */
+.patient-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Vital Display */
+.vital-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.vital-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0d6efd;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Status Indicator */
+.status-indicator {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.status-normal {
+  background-color: #28a745; /* Green */
+}
+
+.status-warning {
+  background-color: #ffc107; /* Yellow */
+}
+
+.status-danger {
+  background-color: #dc3545; /* Red */
+}
+
+/* Card Style */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Dropdown and Form Controls */
+.form-control {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+.option {
+  font-size: 1rem;
+}
+
+/* Add subtle fade-in on page load */
+.vitals-page {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

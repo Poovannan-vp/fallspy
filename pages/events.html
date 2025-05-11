@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="../css/events.css">
+<link rel="stylesheet" href="../css/styles.css">
+
+
+<div class="dashboard">
+    <!-- Injected shared navbar -->
+    <div id="navbar-container"></div>
+
+<div class="events-page">
+    <div class="page-header">
+        <h2>Event History</h2>
+        <div class="filters">
+            <div class="form-group">
+                <label for="patientFilter">Filter by Patient:</label>
+                <select id="patientFilter" class="form-control">
+                    <option value="">All Patients</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dateFilter">Filter by Date:</label>
+                <input type="date" id="dateFilter" class="form-control">
+            </div>
+            <button id="exportBtn" class="btn btn-primary">Export to CSV</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <table id="eventsTable">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Patient</th>
+                    <th>Event Type</th>
+                    <th>Details</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Events will be loaded here -->
+            </tbody>
+</table>
+    </div>
+</div>
+<script src="../js/pages/events.js"></script>
+<script src="../js/pages/shared-navbar.js"></script>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+<!-- Your Firebase config (this defines 'db') -->
+<script src="../firebase-config.js"></script>
+
+<!-- Now your events.js (after firebase-config.js!) -->
+<script src="../js/pages/events.js"></script>
+

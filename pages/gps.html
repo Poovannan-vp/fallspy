@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="../css/gps.css">
+<link rel="stylesheet" href="../css/styles.css">
+
+
+
+<div class="dashboard">
+    <!-- Injected shared navbar -->
+    <div id="navbar-container"></div>
+
+<div class="gps-page">
+    <h2>Live GPS Tracking</h2>
+    
+    <div class="card">
+        <div class="patient-selector">
+            <label for="gpsPatientSelect">Select Patient:</label>
+            <select id="gpsPatientSelect" class="form-control">
+                <option value="">Loading patients...</option>
+            </select>
+            <button id="refreshBtn" class="btn btn-primary">Refresh</button>
+            <button id="viewInMapsBtn" class="btn btn-secondary">View in Google Maps</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div id="map" style="height: 500px;"></div>
+    </div>
+
+    <div class="card">
+        <h3>Location History</h3>
+        <div id="locationHistory" style="height: 300px;"></div>
+    </div>
+</div>
+<script src="../js/pages/gps.js"></script>
+<script src="../js/pages/shared-navbar.js"></script>
+
+<style>
+
+
+<!-- Load Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>

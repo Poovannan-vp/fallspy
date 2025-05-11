@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FallSpy Dashboard</title>
+  <!-- <link rel="stylesheet" href="../css/styles.css" /> -->
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body>
+
+  <div class="dashboard">
+    <!-- Injected shared navbar -->
+    <div id="navbar-container"></div>
+
+    <main class="dashboard-content">
+      <h2>Overview</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Total Patients</h3>
+          <p id="totalPatients">0</p>
+        </div>
+        <div class="card">
+          <h3>Active Alerts</h3>
+          <p id="activeAlerts">0</p>
+        </div>
+        <div class="card">
+          <h3>Recent Events</h3>
+          <p id="recentEvents">0</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <!-- Firebase Config -->
+  <script src="../firebase-config.js"></script>
+
+  <!-- Shared Navbar Script -->
+  <script src="../js/pages/shared-navbar.js"></script>
+
+  <!-- Dashboard Logic -->
+  <script src="../js/pages/dashboard.js"></script>
+
+</body>
+</html>

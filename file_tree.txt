@@ -1,0 +1,24 @@
+Fallspy Project Structure
+├── firebase-config.js
+├── index.html
+├── css/
+│   ├── styles.css
+│   └── vitals.css
+├── js/
+│   ├── app.js
+│   └── pages/
+│       ├── dashboard.js
+│       ├── events.js
+│       ├── gps.js
+│       ├── login.js
+│       ├── patients.js
+│       ├── settings.js
+│       └── vitals.js
+└── pages/
+    ├── dashboard.html
+    ├── events.html
+    ├── gps.html
+    ├── login.html
+    ├── patients.html
+    ├── settings.html
+    └── vitals.html

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>FallSpy - Vitals Monitoring</title>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="stylesheet" href="../css/vitals.css"> <!-- Correct path to vitals.css -->
+</head>
+<div class="dashboard">
+  <!-- Injected shared navbar -->
+  <div id="navbar-container"></div>
+
+<body>
+  <div class="vitals-page">
+    <h2>Vitals Monitoring</h2>
+
+    <div class="card">
+      <div class="patient-selector">
+        <label for="patientSelect">Select Patient:</label>
+        <select id="patientSelect" class="form-control">
+          <option value="">Loading patients...</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Heart Rate</h3>
+        <div class="vital-display">
+          <span id="heartRate" class="vital-value">--</span>
+          <span>bpm</span>
+        </div>
+        <div id="hrStatus" class="status-indicator"></div>
+      </div>
+
+      <div class="card">
+        <h3>SpO2</h3>
+        <div class="vital-display">
+          <span id="spo2" class="vital-value">--</span>
+          <span>%</span>
+        </div>
+        <div id="spo2Status" class="status-indicator"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Vitals History</h3>
+      <div id="vitalsChart" style="height: 300px;"></div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  
+  <script src="../js/config/firebase-config.js"></script> <!-- ✅ Correct path -->
+  <script src="../js/pages/vitals.js"></script> <!-- Your page logic -->
+  <script src="../js/pages/shared-navbar.js"></script>
+</body>
+
+</html>

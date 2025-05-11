@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Management</title>
+
+    <!-- ✅ Corrected path to styles.css -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <style>
+        /* Your existing internal CSS (unchanged) */
+        .patients-page {
+            padding: 1rem;
+        }
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        #patientsTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #patientsTable th, #patientsTable td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        #patientsTable th {
+            background-color: #f8f8f8;
+        }
+        .patient-photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            margin: 10% auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            color: #333;
+            float: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Injected shared navbar -->
+        <div id="navbar-container"></div>
+<div class="patients-page">
+    <div class="page-header">
+        <h2>Patient Management</h2>
+        <button id="addPatientBtn" class="btn btn-primary">Add Patient</button>
+    </div>
+
+    <div class="card">
+        <table id="patientsTable">
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Device ID</th>
+                    <th>Caregiver</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Patients will be loaded here dynamically -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Patient Modal -->
+<div id="patientModal" class="modal">
+    <div class="modal-content card">
+        <span class="close" id="closeModal">&times;</span>
+        <h3 id="modalTitle">Add New Patient</h3>
+        <form id="patientForm">
+            <input type="hidden" id="patientId">
+
+            <div class="form-group">
+                <label for="patientName">Full Name</label>
+                <input type="text" id="patientName" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="patientAge">Age</label>
+                <input type="number" id="patientAge" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="deviceId">Device ID</label>
+                <input type="text" id="deviceId" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="caregiver">Caregiver Email</label>
+                <input type="email" id="caregiver" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save Patient</button>
+        </form>
+    </div>
+</div>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+<!-- ✅ Corrected script paths -->
+<script src="../firebase-config.js"></script>
+<script src="../js/pages/patients.js"></script>
+  <script src="../js/pages/shared-navbar.js"></script>
+
+
+</body>
+</html>
